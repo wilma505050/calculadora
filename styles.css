@@ -1,0 +1,182 @@
+/* Importa a fonte Montserrat do Google Fonts com todas as variações de peso */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Importa a fonte Lemon do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+/* Define variáveis CSS para cores reutilizáveis */
+:root {
+    --laranja-claro: #FF862A;
+    /* Cor laranja para destaque */
+    --alto-contraste-fundo: #000000;
+    /* Cor de fundo para modo alto contraste */
+    --alto-contraste-texto: #ffffff;
+    /* Cor de texto para modo alto contraste */
+    --alto-contraste-link: #ffd700;
+    /* Cor de links para modo alto contraste */
+}
+
+/* Estilos base para o corpo do documento */
+body {
+    font-size: 1rem;
+    /* Tamanho base da fonte */
+    font-family: 'Montserrat';
+    /* Fonte principal */
+    background: color(srgb 0.9 0.8 1);
+    /* Cor de fundo lilás claro */
+}
+
+/* Estilos para títulos h2 */
+h2 {
+    font-family: 'Lemon', serif;
+    /* Fonte especial para títulos */
+    font-size: 2.5em;
+    /* Tamanho grande para títulos */
+    font-style: normal;
+    /* Sem itálico */
+    color: var(--laranja-claro);
+    /* Cor laranja definida na variável */
+}
+
+/* Container do menu de acessibilidade */
+.menu-acessibilidade {
+    position: fixed;
+    /* Fixo na tela */
+    top: 2rem;
+    /* Distância do topo */
+    right: 20px;
+    /* Distância da direita */
+    z-index: 1000;
+    /* Garante que fique acima de outros elementos */
+}
+
+/* Estilo para rotacionar o botão de acessibilidade */
+.rotacao-botao {
+    transform: rotate(-90deg);
+    /* Rotaciona 90 graus */
+    transform-origin: right center;
+    /* Ponto de origem da rotação */
+}
+
+/* Container das opções de acessibilidade */
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    /* Espaço acima */
+    display: flex;
+    /* Layout flexível */
+    flex-direction: column;
+    /* Organiza os itens verticalmente */
+}
+
+/* Estilo para os botões de acessibilidade */
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+    /* Espaço entre botões */
+}
+
+/* Classe para esconder elementos */
+.apresenta-lista {
+    display: none;
+    /* Oculta o elemento */
+}
+
+/* Estilos para o modo alto contraste */
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo);
+    /* Fundo preto */
+    color: var(--alto-contraste-texto);
+    /* Texto branco */
+}
+
+/* Estilos específicos para header e footer no modo alto contraste */
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+    background-color: var(--alto-contraste-fundo);
+    /* Fundo preto */
+    color: var(--alto-contraste-texto);
+    /* Texto branco */
+}
+
+/* Estilo para links no modo alto contraste */
+.alto-contraste .nav-link {
+    color: var(--alto-contraste-link);
+    /* Cor dourada */
+}
+
+/* Estilos para a calculadora de IMC */
+#calculadora-imc {
+    background-color: #fff;
+    /* Fundo branco */
+    padding: 2rem;
+    /* Espaçamento interno */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+/* Estilos da calculadora no modo alto contraste */
+.alto-contraste #calculadora-imc {
+    background-color: color (black);
+    /* Fundo preto */
+    color: var(--alto-contraste-texto);
+    /* Texto branco */
+    border: 2px solid var(--alto-contraste-link);
+    /* Borda dourada */
+}
+
+/* Estilização do formulário de IMC */
+#form-imc {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fundo branco semi-transparente */
+    padding: 2rem;
+    /* Espaçamento interno */
+    border-radius: 1rem;
+    /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+/* Estilo para rótulos do formulário */
+#form-imc label {
+    font-weight: bold;
+    /* Texto em negrito */
+    color: var(--laranja-claro);
+    /* Cor laranja */
+}
+
+/* Estilo para inputs do formulário */
+#form-imc input {
+    border: 2px solid var(--laranja-claro);
+    /* Borda laranja */
+}
+
+/* Estilo para botão do formulário */
+#form-imc button {
+    background-color: var(--laranja-claro);
+    /* Fundo laranja */
+    border: none;
+    /* Sem borda */
+}
+
+/* Efeito hover para o botão */
+#form-imc button:hover {
+    background-color: #e6711f;
+    /* Laranja mais escuro ao passar o mouse */
+}
+
+/* Estilo para o resultado do cálculo */
+#resultado {
+    font-size: 1.2rem;
+    /* Tamanho aumentado */
+    font-weight: bold;
+    /* Texto em negrito */
+}
+
+/* Media query para telas pequenas (até 576px) */
+@media (max-width: 576px) {
+    #form-imc {
+        padding: 1rem;
+        /* Reduz o espaçamento interno */
+    }
+}
